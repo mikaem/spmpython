@@ -20,5 +20,3 @@ plt.title('Convergence of spectral differentiation')
 plt.xlabel('N')
 plt.ylabel('error')
 plt.show()
-
-
