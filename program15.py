@@ -6,6 +6,7 @@ Program 15
 # Solve eigenvalue BVP u_xx=lambda*u, u(-1)=u(1)=0
 
 from numpy import *
+from cheb import cheb
 from numpy.linalg import matrix_power,eig,solve
 from matplotlib import pyplot as plt
 

@@ -7,6 +7,7 @@ Program 16
 
 from numpy import *
 import time
+from cheb import cheb
 from numpy.linalg import matrix_power,solve
 from matplotlib import pyplot as plt
 from scipy.interpolate import interp2d,griddata,bisplev,bisplrep
