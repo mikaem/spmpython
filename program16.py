@@ -31,7 +31,7 @@ tic = time.time(); u = solve(L,f); toc = time.time() - tic;      # Solve problem
 
 # Reshape long 1D results onto 2D grid:
 uu = zeros((N+1,N+1))
-uu[1:N,1:N]=u.reshape(N-1,N-1).transpose()
+uu[1:N,1:N]=u.reshape(N-1,N-1)
 xx,yy = meshgrid(x,y)
 value = uu[int(N/4.+1),int(N/4.+1)]
 
