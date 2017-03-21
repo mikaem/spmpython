@@ -24,7 +24,6 @@ vvold = vv
 
 # Time-stepping by leap frog formula:
 fig = plt.figure()
-[ay,ax] = meshgrid([0.56,0.06],[0.1,0.55])
 for n in range(0,3*plotgap+1):
     t = n*dt
     if (((n+0.5)%plotgap) < 1):        #plots at multiplies of t = 1/3
