@@ -22,10 +22,8 @@ L = 6; x = L*x; D = D/L;           #rescale to [-L,L]
 A = -matrix_power(D, 2)
 A = A[1:N,1:N] + (1+3j)*diag(x**2)
 E,V = eig(A)
-ii = argsort(E)
-#E = E[ii]
 plt.hold('on')
-plt.plot(E,'o')
+plt.plot(real(E),imag(E),'o')
 plt.axis([0,50,0,40])
 
 # Pseudospectra
