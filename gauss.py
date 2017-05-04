@@ -9,9 +9,9 @@ from numpy import *
 from numpy.linalg import eig
 
 def gauss(N):
-    beta = 0.5/sqrt(1-(2*arange(1,N))**(-2))
+    beta = 0.5/sqrt(1-(2*arange(1,N-1))**(-2))
     T = diag(beta, 1) + diag(beta, -1)
     x, V = eig(T)
     i = argsort(x)
-    w = 2*V[i]**2
+    w = 2*V[0,i]**2
     return x,w
