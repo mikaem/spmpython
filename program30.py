@@ -29,6 +29,10 @@ for N in range(1,Nmax+1):
     #x, w = clencurt(N)
     # GAUSS
     x,w = gauss(N)
+    x2, w2 = legendre.leggauss(N)
+    #from IPython import embed;embed()
+    assert allclose(x, x2)
+    assert allclose(w2, w)
     f = abs(x)**3
     E[0,N-1] = abs(w.dot(f) - 0.5)
     f = exp(-x**(-2))
